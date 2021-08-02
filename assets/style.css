@@ -1,0 +1,464 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/*
+1 vị trí
+2 kích thước(height, width)
+3 kiểu dáng(kiểu chữ)
+4 màu sắc
+-- nguyen tắc làm việc,
+làm từ ngoài vào trong,
+làm từ trên xuống dưới
+3. tổng quan
+
+*/
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.mt-8 {
+    margin-top: 8px !important;
+}
+.mt-32 {
+    margin-top: 32px !important;
+}
+.mt-16 {
+    margin-top: 16px !important;
+}
+.col-half {
+    width: 50%;
+}
+.col-full {
+    width: 100%;
+}
+.col-third {
+    width: 33.333%;
+}
+.text-center {
+    text-align: center !important;
+}
+.pull-right {
+    float: right !important;
+}
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    color: rgb(0, 0, 0);
+    background-color: #ccc;
+}
+.clear {
+    clear: both;
+}
+.text-white {
+    color: #fff !important;
+}
+/*common*/
+
+#header {
+    position: fixed;
+    background-color: #000;
+    height: 46.6px;
+    right: 0%;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav,
+.subnav {
+    list-style-type: none;
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+#nav li a {
+    text-decoration: none;
+    padding: 0 24px;
+    color: #fff;
+    line-height: 47px;
+    display: inline-block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover {
+    background-color: #ccc;
+    color: #fff;
+    transition: 0.5s;
+}
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .nav-arowdow {
+    font-size: 14px;
+    align-items: center;
+}
+#nav .subnav {
+    min-width: 160px;
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#header .seach-btn {
+    float: right;
+    cursor: pointer;
+}
+#header .meni-icon {
+    color: #000;
+}
+#header .menu-mobile-btn {
+    display: none;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+#header .seach-icon,
+#header .meni-icon {
+    font-size: 20px;
+    color: #fff;
+    line-height: 46px;
+    padding: 13.5px 21px;
+}
+#header .menu-mobile-btn:hover {
+    background-color: #ccc;
+}
+#header .seach-icon:hover {
+    background-color: orangered;
+}
+#slider {
+    padding-top: 50%;
+    margin-top: 46px;
+    background: url(../img/la.jpg) top center / cover no-repeat;
+    color: #fff;
+    position: relative;
+}
+#slider .text-content {
+    position: absolute;
+    bottom: 48px;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-dcription {
+    font-size: 15px;
+    margin-top: 25px;
+    text-shadow: 0 0 1px #333;
+}
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0px 112px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 1px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500px;
+    letter-spacing: 4px;
+}
+#content .sub-heading {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 25px;
+    opacity: 0.6;
+}
+#content .about-content {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+#content .member-list {
+    margin-top: 32px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+}
+#content .member-name {
+    font-size: 15px;
+}
+#content .member-img {
+    border-radius: 5px;
+    width: 60%;
+}
+/* tour section */
+.tour-section {
+    background-color: #000;
+    min-height: 846px;
+    margin-top: 100px;
+}
+.tickkest-list {
+    background-color: #fff;
+    margin-top: 41px;
+}
+.tickkest-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.tickkest-list .Qualyti {
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+}
+.tickkest-list > li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    list-style: none;
+}
+/* play list */
+.places-list {
+    margin-top: 16px;
+    padding-bottom: 75px;
+}
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.place-heading {
+    font-weight: 600;
+}
+.place-time {
+    margin-top: 15px;
+    opacity: 0.4;
+}
+.place-dessription {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+.place-item {
+    width: 33.3333%;
+}
+.place-img {
+    width: 100%;
+    display: block;
+}
+.place-img:hover {
+    opacity: 0.6;
+}
+/*contact from*/
+.contact-content {
+    margin-top: 48px;
+    line-height: 1.5;
+}
+.contact-info {
+    font-size: 18px;
+}
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-info a:hover {
+    opacity: 1;
+}
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 30px;
+    font-style: inherit;
+}
+.contact-from {
+    font-size: 15px;
+}
+.contact-from .from-control {
+    padding: 10px;
+    height: 41px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #ccc !important;
+    font-size: 16px;
+}
+.map-section {
+    padding-top: 100px;
+}
+.map-section img {
+    width: 100%;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    color: #000;
+}
+#footer .social-list a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .social-list > a:hover {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 28;
+}
+#footer .social-list {
+    font-size: 24px;
+}
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+#footer .social-list .copyright a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+/*tab left*/
+/*madal*/
+.modal {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open{
+    display: flex;
+}
+.modal_container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFaceIn ease .5s;
+}
+.modal_close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.modal_close:hover{
+    opacity: 1;
+}
+.modal_header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+}
+.modal_heading-icon{
+    margin-right: 16px;
+}
+.modal_body{
+    padding: 16px;
+}
+.modal_lable{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal_input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.modal_input:focus{
+    outline: 2px solid #009688;
+}
+#buy-tickets{
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    border: none;
+    color: #fff;
+    background-color: #009677;
+    padding: 18px;
+}
+#buy-tickets:hover{
+    background-color: #999;
+    color: #000;
+}
+.footer_modal{
+    padding: 16px;
+    text-align: right;
+}
+.footer_modal a{
+    color: #2196f3;
+}
+@keyframes modalFaceIn {
+    from{
+        transform: translateY(-140px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
